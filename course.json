@@ -1,17 +1,17 @@
 {
   "author": {
-    "name": "Brian Holt",
-    "company": "Stripe"
+    "name": "Lasse Lund Sten Jensen",
+    "company": "Novo Nordisk"
   },
-  "title": "Next.js Course Starter Kit",
-  "subtitle": "for Frontend Masters",
-  "frontendMastersLink": "https://frontendmasters.com/courses/complete-react-v8/",
+  "title": "Software Engineering",
+  "subtitle": "for Data Scientists",
+  "frontendMastersLink": "",
   "social": {
-    "linkedin": "btholt",
-    "github": "btholt",
-    "twitter": "holtbt"
+    "linkedin": "lasselundstenjensen",
+    "github": "lasselundstenjensen",
+    "twitter": ""
   },
-  "description": "A starter kit for making really amazing courses, optimized for Frontend Masters",
+  "description": "Software Engineering for Data Scientists",
   "keywords": ["your", "Google", "keywords", "here"],
   "productionBaseUrl": "/itu-bds-sdse",
   "csvPath": "./out/lessons.csv"
