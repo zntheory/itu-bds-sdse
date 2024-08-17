@@ -350,16 +350,22 @@ blockquote > *:last-child {
 .lesson-title {
   font-size: 20px;
   padding: 15px 30px;
+  color: white;
 }
 
 .lesson-content {
   line-height: 1.5;
+  color: white;
 }
 
 .lesson-text {
   width: 100%;
   padding: 25px 5px 25px 35px;
   min-height: 200px;
+}
+
+.lesson-text ol {
+  color: white;
 }
 
 .sections-name {
@@ -523,7 +529,7 @@ pre code {
 code,
 pre code,
 pre code.hljs {
-  background-color: var(--emphasized-bg);
+  background-color: white;
   color: #000;
 }
 

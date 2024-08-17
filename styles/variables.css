@@ -1,25 +1,25 @@
 :root {
-  --primary: #dfa067;
-  --secondary: #93aca7;
-  --highlight: #224159;
+  --primary: #0d1117; /* Dark navy blue for a modern dark mode */
+  --secondary: #ffbb00; /* Bright accent yellow */
+  --highlight: #f0f6fc; /* Light blue-white highlight */
 
-  --text-header: var(--primary);
+  --text-header: var(--highlight);
   --text-main-headers: var(--highlight);
-  --text-links: #ea8000;
-  --text-footer: #333;
+  --text-links: #ffbb00; /* Bright yellow for links */
+  --text-footer: #8b949e; /* Subtle gray for footer text */
 
-  --bg-main: white;
-  --bg-dots: var(--highlight);
-  --bg-lesson: white;
+  --bg-main: #0d1117; /* Main background dark navy */
+  --bg-dots: #161b22; /* Slightly lighter dark background */
+  --bg-lesson: #21262d; /* Darker lesson background */
 
-  --nav-buttons: var(--highlight);
-  --nav-buttons-text: white;
+  --nav-buttons: var(--secondary);
+  --nav-buttons-text: #0d1117; /* Dark black text on buttons */
 
-  --corner-active: var(--highlight);
-  --corner-inactive: #f4f4f4;
+  --corner-active: var(--secondary);
+  --corner-inactive: #30363d; /* Gray for inactive elements */
   --icons: var(--highlight);
-  --footer-icons: var(--highlight);
+  --footer-icons: var(--secondary);
 
-  --emphasized-bg: #dce8ff;
-  --emphasized-border: #aab6d2;
+  --emphasized-bg: #2d333b; /* Subtle dark gray for emphasis */
+  --emphasized-border: #484f58; /* Softer border contrast */
 }
