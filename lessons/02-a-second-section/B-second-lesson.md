@@ -11,3 +11,13 @@ function getGreeting() {
 
 console.log(getGreeting());
 ```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("Hello, World!")
+}
+```
