@@ -2,17 +2,19 @@
 title: "Introduction"
 description: "The introduction to this course."
 keywords:
-  - A course starter
-  - Next.js
-  - React
-  - Brian Holt
+  - Software engineering
+  - Data science
+  - Go
+  - Lasse Lund Sten Jensen
 ---
 
-Hello! And welcome to the Next.js course starter by [Brian Holt][twitter].
+Hello! And welcome to the introduction to Go programming by [Lasse Lund Sten Jensen][linkedin].
 
-![Cat, dog, and rat logo for the course](./images/BRAND-WHearts.png)
+[When and why][youtube-go-io]
 
-This is a course starter specifically made for making online courses and optimized for use with [Frontend Masters][fem].
+Go and other languages
 
-[twitter]: https://twitter.com/holtbt
-[fem]: https://www.frontendmasters.com
+
+[linkedin]: https://linkedin.com/in/lasselundstenjensen
+[youtube-go-io]: https://www.youtube.com/watch?v=sln-gJaURzk
+[youtube-go-io-cutout]: [https://www.youtube.com/watch?v=c-P5R0aMylM]
