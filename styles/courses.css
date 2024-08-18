@@ -69,6 +69,7 @@ a {
 }
 
 .navbar-info {
+  color: #f0f6fc;
   display: flex;
   flex-direction: row;
   align-items: center;
