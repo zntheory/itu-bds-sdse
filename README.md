@@ -1,4 +1,4 @@
-> This contains the course materials for the ITU SDSE course 2024. 
+> This contains the course materials for the ITU SDSE course 2024.
 > 
 > Course Website Starter Template by Brian Holt.
 
