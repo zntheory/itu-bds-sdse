@@ -5,6 +5,9 @@ keywords:
   - Software engineering
   - Data science
   - Go
+  - Git
+  - Dagger
+  - Workflow automation
   - Lasse Lund Sten Jensen
 ---
 
