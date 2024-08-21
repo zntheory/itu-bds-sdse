@@ -4,7 +4,6 @@
 - New language
 - Open-source
 - Multi-platform
-
-
+- Compiled
 
 > Designed by: Ken Thompson, Rob Pike, Robert Griesemer @ Google
