@@ -1,3 +1,10 @@
-# What is go?
+# What is Go?
 
-- It was created by Google in 2011.
+- Created by Google in 2007—First released in 2012
+- New language
+- Open-source
+- Multi-platform
+
+
+
+> Designed by: Ken Thompson, Rob Pike, Robert Griesemer @ Google
