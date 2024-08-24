@@ -67,3 +67,34 @@ This will install several tool integrations in VSCode and most importantly the G
 
 > WSL = Windows Subsystem for Linux</br>
 > LSP = Language Server Protocol
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Let's see if it works
+
+> Hello World in Go, file: `main.go`
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+</br>
+</br>
+</br>
+
+```bash
+go run main.go
+```
