@@ -9,5 +9,5 @@ title: "Multi-platform and common use cases"
 
 # Common use cases
 
-- CLI tools
+- Command Line Interface (CLI) tools
 
