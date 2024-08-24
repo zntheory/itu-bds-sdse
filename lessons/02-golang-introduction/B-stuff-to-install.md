@@ -1,3 +1,7 @@
+---
+title: "Stuff to install"
+---
+
 # Stuff to install
 
 We will be using **Visual Studio Code** (VSCode) as our editor, and we will be **using the terminal to run our code**. We also need **Go** (obviously, duh) and extensions for VSCode to make our lives easier.
