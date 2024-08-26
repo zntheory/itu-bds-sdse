@@ -64,4 +64,6 @@ There are many aspects that make software maintainable, but one of the most impo
 </br>
 </br>
 
-Another is being able to run the code. In a repeatable way. In a predictable way.
+Another is being able to run the code.</br>
+In a repeatable way.</br>
+In a predictable way.
