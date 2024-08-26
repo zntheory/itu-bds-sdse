@@ -81,6 +81,8 @@ This will install several tool integrations in VSCode and most importantly the G
 
 Hello World in Go!
 
+Don't worry about the code for now. You will get to understand it when we go through the fundamentals.
+
 Create a new file called `main.go`:
 
 ```go
