@@ -79,7 +79,9 @@ This will install several tool integrations in VSCode and most importantly the G
 
 ## Let's see if it works
 
-> Hello World in Go, file: `main.go`
+Hello World in Go!
+
+Create a new file called `main.go`:
 
 ```go
 package main
@@ -93,8 +95,14 @@ func main() {
 
 </br>
 </br>
-</br>
+
+Run:
 
 ```bash
 go run main.go
 ```
+
+</br>
+</br>
+
+You should see something that is not an error >D
