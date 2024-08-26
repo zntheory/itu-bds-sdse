@@ -1,3 +1,3 @@
 # Git
 
-> Learning goals here
+> Will be added later
