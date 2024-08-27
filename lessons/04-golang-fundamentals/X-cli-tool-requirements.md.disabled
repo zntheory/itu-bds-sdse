@@ -1,3 +1,11 @@
+---
+description: "Fundamentals of the Go programming language."
+title: "CLI tool requirements"
+keywords:
+  - Software engineering
+  - Go
+---
+
 # CLI Tool Requirements
 
 As mentioned earlier, we are going to build a command line tool that can compress and decompress bitmap images.

@@ -1,5 +1,6 @@
 ---
 description: "Fundamentals of the Go programming language."
+title: "The basics"
 keywords:
   - Software engineering
   - Go
@@ -169,3 +170,158 @@ It manipulates the module
 - `go test` -> tests the module
 - `go run` -> builds and runs the module
 - `go get` -> retrieves dependencies
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Creating a module
+
+1. Create a new folder (e.g. `gointro`)
+2. Run `go mod init <module-name>`
+
+</br>
+</br>
+
+You will get a `go.mod` file with the module name and Go version the code is to be compiled in.
+
+Very simple.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+`go.mod` example:
+
+```go
+module itu.com/bds/gointro
+
+go 1.23
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Running the module
+
+```bash
+go run .
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+If you are coming from **JavaScript**, the `go.mod` file is similar to the `package.json` file.
+
+Similarly, if you are coming from **Python**, the `go.mod` file is similar to the `requirements.txt`. Or `pyproject.toml` file when using Poetry.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Workspaces
+
+Kind of a "super module" that can be used to organize projects into multiple modules.
+
+- Introduced in Go 1.18
+
+It contains a `go.work` file that contains configuration and metadata—including which module to use.
+
+The Go CLI manipulates the workspace.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Creating a workspace
+
+1. Create a new folder
+2. `go work init <modules-directory>`
+
+The `go work init` command tells *go* to create a `go.work` file for a workspace containing the modules in the `<modules-directory>` directory.
+
+For more details: https://go.dev/doc/tutorial/workspaces
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+`go.work` example:
+
+```go
+go 1.23
+
+use ./gointro
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+But really, modules and packages are all you are going to need.
