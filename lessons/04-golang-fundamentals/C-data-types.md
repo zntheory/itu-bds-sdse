@@ -54,6 +54,22 @@ bool
 </br>
 </br>
 
+> What is the difference between `int` and `uint`?
+
+> Why would you use one over the other?
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 ## Operators
 
 Boolean operators: `==` , `!=` , `<` , `<=` , `>` , `>=` , `&&` , `||` , `!`
@@ -73,3 +89,5 @@ Boolean operators: `==` , `!=` , `<` , `<=` , `>` , `>=` , `&&` , `||` , `!`
 ## Additional data types
 
 We also have **pointers**.
+
+<!-- Reference for ranges: [Go integer data type](https://www.w3schools.com/go/go_integer_data_type.php) -->
