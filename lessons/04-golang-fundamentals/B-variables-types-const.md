@@ -86,6 +86,8 @@ Backticks `` ` `` are used for raw string literals.
 
 ## TRY IT OUT
 
+![Rob Pike](../../images/rob-pike.png)
+
 </br>
 </br>
 </br>
