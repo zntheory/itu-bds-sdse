@@ -1,0 +1,42 @@
+# Go Fundamentals Exercises
+
+## Exercise 1: Working with Multiple Variables and String Formatting
+**Objective:** Practice declaring and working with different data types and using basic string formatting.
+
+**Instructions:**
+1. Create a Go program with a `main` function.
+2. Declare the following variables:
+   - `firstName` (string), `lastName` (string), and assign them appropriate values.
+   - `age` (int) and assign it a value.
+   - `height` (float32) and assign it a value (in meters).
+3. Use `fmt.Printf` to print the following sentence with the variables:
+   ```
+   My name is [firstName] [lastName]. I am [age] years old and [height] 
+   meters tall.
+   ```
+
+**Sample Output:**
+```
+My name is John Doe. I am 30 years old and 1.75 meters tall.
+```
+
+</br>
+</br>
+</br>
+</br>
+
+## Exercise 2: Basic Arithmetic Operations with Constants and Type Conversion
+**Objective:** Use constants, perform arithmetic operations, and understand type conversion.
+
+**Instructions:**
+1. Declare two constants `hoursInDay` (int) and `daysInWeek` (int) with values `24` and `7`, respectively.
+2. Calculate the total number of hours in a week and store it in a variable `totalHours`.
+3. Declare a float variable `averageSleepHours` and assign it a value (e.g., `7.5`).
+4. Calculate the total sleep hours in a week (`averageSleepHours * daysInWeek`) and store it in a variable `totalSleepHours`.
+5. Print both `totalHours` and `totalSleepHours` using `fmt.Println`.
+
+**Sample Output:**
+```
+Total hours in a week: 168
+Total sleep hours in a week: 52.5
+```
