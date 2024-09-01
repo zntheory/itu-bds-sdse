@@ -18,6 +18,8 @@ title: "Multi-platform and common use cases"
 </br>
 </br>
 </br>
+</br>
+</br>
 
 # Common use cases
 
@@ -36,13 +38,57 @@ title: "Multi-platform and common use cases"
 </br>
 </br>
 </br>
+</br>
+</br>
 
 # Can Go be used for Machine Learning?
 
-Yes, but it is not the best choice. Python is the most popular language for Machine Learning.
+Yes, but it depends for what. Python is the most popular language for Machine Learning.
 
 Several reasons for this, but the main one is the number of libraries and frameworks available for Python and lack of [basic support in Go for e.g. CUDA and math/statistics libraries](https://blog.jetbrains.com/go/2023/06/22/does-machine-learning-in-go-have-a-future/).
 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+Go is powerful when it comes to preprocessing, data cleaning, and manipulating large amounts of data.
+
+It is in large due to its speed and concurrency model:
+
+- High concurrency
+- High performance
+- Suitable for real-time AI applications
+- Suitable for data processing, big data, and data streaming
+- Great cloud support through libraries
+- Efficient use of resources, fast cold start
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## ML Go specific libraries
+
+- Natural Language Processing (NLP) `go-nlp`
+- Computer Vision `gocv`, with CUDA support
+
+![gocv](../../images/lessons/golang-introduction/gocv-logo.png)
+
+</br>
+</br>
 </br>
 </br>
 </br>
