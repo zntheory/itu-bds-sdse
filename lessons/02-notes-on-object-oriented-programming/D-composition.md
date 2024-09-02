@@ -10,7 +10,7 @@ keywords:
 
 # Composition
 
-Composition implements a **has-a relationship**. It allows a class to contain an object of another class.
+Composition implements a **"has-a"** relationship. It allows a class to contain an object of another class.
 
 </br>
 </br>
