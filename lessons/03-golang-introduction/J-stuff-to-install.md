@@ -23,7 +23,7 @@ You may know what Git is about, but Docker and Dagger are probably new to you. D
 - **Docker Engine** (latest version, 27.1.1), can be installed with **Docker Desktop** (latest version, 4.33.0)
 - **Dagger** (latest version, 0.12.5)
 
-Versions are as of writing this course (August 2024).
+Versions are as of writing this course (September 2024).
 
 Using Homebrew for package management is recommended. You can install Homebrew by following the instructions [here](https://brew.sh/). Homebrew only works on MacOS and most Linux distributions.
 
@@ -77,7 +77,7 @@ This will install several tool integrations in VSCode and most importantly the G
 </br>
 </br>
 
-## Let's see if it works
+### <i class="fa-solid fa-rocket"></i> Let's see if it works <i class="fa-solid fa-rocket"></i>
 
 Hello World in Go!
 
