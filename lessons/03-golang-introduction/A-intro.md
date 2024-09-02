@@ -38,3 +38,17 @@ Hello! And welcome to the introduction to Go programming by [Lasse Lund Sten Jen
 [linkedin]: https://linkedin.com/in/lasselundstenjensen
 <!-- [youtube-go-io]: https://www.youtube.com/watch?v=sln-gJaURzk
 [youtube-go-io-cutout]: [https://www.youtube.com/watch?v=c-P5R0aMylM] -->
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+![Gopher](https://go.dev/tour/static/img/gopher.png)
