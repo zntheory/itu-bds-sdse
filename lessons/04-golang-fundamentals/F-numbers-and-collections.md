@@ -193,6 +193,7 @@ Overrides any capacity defined in the declaration.
 
 ```go
 var countries = []string{"Denmark", "Sweden", "Norway"}
+println(len(countries))
 ```
 
 **Initialize with a capacity of 5.**
@@ -215,8 +216,37 @@ var countries = make([]string, 5)
 </br>
 </br>
 
+## Maps
+
+Pay attention to the type definition.
+
 - For maps the default value is `nil`—initialization is required.
-- Discuss the `make` function for maps.
+
+</br>
+
+```go
+var platformUsers = map[string]int{"Facebook": 1000000, "Twitter": 500000}
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+The `make()` function can also be used to initialize a map and this is most commonly what is done as maps are rarely small in size.
+
+```go
+var platformUsers = make(map[string]int)
+platformUsers["Facebook"] = 1000000
+platformUsers["Twitter"] = 500000
+```
 
 </br>
 </br>
