@@ -82,6 +82,7 @@ The Go compiler will actually group all files that belong to the same package at
 - Referencing from another package
 - Unsafe `print` and `println` functions and safe alternatives
 - Comments
+- Linting on save only (VSCode)
 
 </br>
 </br>
@@ -135,7 +136,10 @@ func main() {
 
 ## Other notes
 
-Imports are per file, not per package.
+- Imports are per file, not per package.
+- Importing a package in the same module is done with the project name (in the `go.mod` file) as prefix to the package name—think of it as a path.
+- Imported packages can be aliased.
+- Referencing a package is done with the package name as prefix to the identifier.
 
 </br>
 </br>
