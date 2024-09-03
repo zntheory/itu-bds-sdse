@@ -59,7 +59,7 @@ func addAndSubstract(a int, b int) (int, int) {
 }
 ```
 
-Labelled return values, but try and avoid this as it is considered a bad practice.
+Labelled return values, but try to limit the use of this as it obscures where return values are set as functions grow tall.
 
 ```go
 func multiply(a, b int) (result int) {
@@ -67,6 +67,32 @@ func multiply(a, b int) (result int) {
     return
 }
 ```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Using function return values
+
+Escape the return values you don't need with `_`.
+
+```go
+func main() {
+    sum, _ := addAndSubstract(1, 2)
+    fmt.Println(sum)
+}
+```
+
+</br>
+</br>
+
+> Why would you want to escape a return value?
 
 </br>
 </br>
