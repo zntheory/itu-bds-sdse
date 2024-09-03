@@ -244,6 +244,7 @@ The `make()` function can also be used to initialize a map and this is most comm
 
 ```go
 var platformUsers = make(map[string]int)
+
 platformUsers["Facebook"] = 1000000
 platformUsers["Twitter"] = 500000
 ```
