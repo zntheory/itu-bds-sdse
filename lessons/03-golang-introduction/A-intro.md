@@ -8,7 +8,7 @@ keywords:
   - Lasse Lund Sten Jensen
 ---
 
-Hello! And welcome to the introduction to Go programming by [Lasse Lund Sten Jensen][linkedin].
+Hello! And welcome to the introduction to Go programming.
 
 </br>
 </br>

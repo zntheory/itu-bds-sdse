@@ -22,7 +22,7 @@ In this lesson, we will cover the fundamentals of the Go programming language.
 </br>
 </br>
 
-- Syntax rules; use of curly braces, case-sensitivity
+- Syntax rules; use of curly braces, case-sensitivity, comments
 - Modules
 - Variables, types and constants
 - Data types
