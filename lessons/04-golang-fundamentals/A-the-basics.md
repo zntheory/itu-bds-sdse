@@ -64,10 +64,10 @@ As a practical exercise (well, many exercises) along the way, we are going to bu
 
 ## Language types
 
-Developers write code in | Shipped as</br>
-Interpreted languages -> Source code (e.g. JS, Python)</br>
-Intermediate compiled languages -> Bytecode (e.g. Java)</br>
-Compiled languages -> Machine code
+</br>
+</br>
+
+![Languages ship as](../../images/lessons/golang-fundamentals/languages-ship-as.svg)
 
 </br>
 </br>
@@ -81,10 +81,7 @@ Compiled languages -> Machine code
 </br>
 </br>
 
-Developers write code in | Shipped as</br>
-Go -> Source code (e.g. JS, Python)</br>
-Go -> Bytecode (e.g. Java)</br>
-Go -> Machine code
+![Languages ship as](../../images/lessons/golang-fundamentals/go-ship-as.svg)
 
 </br>
 </br>
