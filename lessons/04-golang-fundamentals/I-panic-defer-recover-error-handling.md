@@ -23,6 +23,22 @@ keywords:
 </br>
 </br>
 
+## init
+
+Used to run code that runs before the main function. 
+
+All init functions across all packages are executed.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 ## panic
 
 This is an interruption. It will terminate the program, if not handled.

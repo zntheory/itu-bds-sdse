@@ -1,0 +1,29 @@
+---
+description: "Fundamentals of the Go programming language."
+title: "Factories"
+keywords:
+  - Software engineering
+  - Go
+---
+
+## Factories
+
+* No constructors in Go.
+
+Instead we use the **design pattern**: Factory
+
+```go
+func NewPerson(name string, age int) Person {
+    return Person{name, age}
+}
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
