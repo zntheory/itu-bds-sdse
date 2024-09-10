@@ -100,7 +100,7 @@ Backticks `` ` `` are used for raw string literals.
 </br>
 </br>
 
-Question: When might we want to specify a type for numbers?
+**Question:** When might we want to specify a type for numbers?
 
 </br>
 </br>
