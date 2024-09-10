@@ -41,13 +41,13 @@ func main() {
 
 </br>
 
-### Exercise: Create a data structure for a course with instructor and students
+### Exercise: Create a data structure for a course with instructor
 
-> Create structs for a course with an instructor and students.
+> Create structs for a course with an instructor.
 
-> Implement a method that adds a student to the course.
+> The instructor should have a first name, last name.
 
-> Implement a method that adds an instructor to the course.
+> Implement a method that prints the first name and last name of an instructor.
 
 </br>
 
