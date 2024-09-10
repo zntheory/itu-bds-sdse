@@ -50,11 +50,11 @@ func add(a int, b int) int {
     return a + b
 }
 
-func substract(a, b int) int {
+func subtract(a, b int) int {
     return a - b
 }
 
-func addAndSubstract(a int, b int) (int, int) {
+func addAndSubtract(a int, b int) (int, int) {
     return a + b, a - b
 }
 ```
@@ -84,7 +84,7 @@ Escape the return values you don't need with `_`.
 
 ```go
 func main() {
-    sum, _ := addAndSubstract(1, 2)
+    sum, _ := addAndSubtract(1, 2)
     fmt.Println(sum)
 }
 ```
