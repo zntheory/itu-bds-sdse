@@ -8,7 +8,7 @@ keywords:
 
 ## Type definitions
 
-We already know that packages can include variables, constants, and functions.
+Recap: packages can include variables, constants, and functions.
 
 But they can also include types:
 
@@ -74,9 +74,11 @@ cs.PrintInChinese()
 
 </br>
 
-> Create a new type 'distance'.
+> Create a new type 'distance' from an existing number type.
 
-> 
+> Declare a variable of type 'distance'; lets call it 'miles'.
+
+> Create a method for the 'distance' type that converts the distance to kilometers.
 
 </br>
 </br>
