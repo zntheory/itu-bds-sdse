@@ -1,6 +1,6 @@
 ---
 description: "Fundamentals of the Go programming language."
-title: "Type definitions"
+title: "Type definitions and methods"
 keywords:
   - Software engineering
   - Go
@@ -48,6 +48,8 @@ cs := customString("Hello")
 </br>
 </br>
 
+## Methods
+
 Methods are extensions to types and are defined with a special syntax on functions.
 
 ```go
@@ -74,12 +76,45 @@ cs.PrintInChinese()
 
 </br>
 
+### Exercise: Distance converter
+
 > Create a new type 'distance' from an existing number type.
 
 > Declare a variable of type 'distance'; lets call it 'miles'.
 
 > Create a method for the 'distance' type that converts the distance to kilometers.
 
+> Call the method on the 'miles' variable and print the result.
+
 <!-- You can also think about the attribute argument as: func (this TheType) TheFunction() {} -->
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Complex types
+
+We got two complex types in Go: **Structs** and **Interfaces**.
+
+### Structures
+
+* They are similar to the idea of a class
+* Got a default constructor
+* Can have methods
+* A data type with strongly typed properties
+
+### Interfaces
+
+* A collection of method signatures
+* Emulates polymorphism from OOP
+* Interfaces can be embedded in other interfaces
+* Implicit implementation
+  
 </br>
 </br>
