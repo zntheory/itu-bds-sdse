@@ -80,5 +80,6 @@ cs.PrintInChinese()
 
 > Create a method for the 'distance' type that converts the distance to kilometers.
 
+<!-- You can also think about the attribute argument as: func (this TheType) TheFunction() {} -->
 </br>
 </br>
