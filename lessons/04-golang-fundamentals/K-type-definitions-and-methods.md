@@ -105,7 +105,7 @@ We got two complex types in Go: **Structs** and **Interfaces**.
 ### Structures
 
 * They are similar to the idea of a class
-* Got a default constructor
+* Got a default constructor mechanism
 * Can have methods
 * A data type with strongly typed properties
 

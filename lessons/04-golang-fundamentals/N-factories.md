@@ -8,7 +8,7 @@ keywords:
 
 ## Factories
 
-* No constructors in Go.
+* Remember: No constructors in Go.
 
 Instead we use the **design pattern**: Factory
 
@@ -19,11 +19,8 @@ func NewPerson(name string, age int) Person {
 ```
 
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
+> With some clever naming, we could name a package `person` and the function `New` to make it look like a constructor, i.e. `person.New("John", 30)`.
+
 </br>
 </br>

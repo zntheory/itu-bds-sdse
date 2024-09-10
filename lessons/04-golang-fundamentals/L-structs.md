@@ -21,7 +21,7 @@ type Person struct {
 
 ### Constructor
 
-Go has two built-in constructors for structs—with and without field names.
+Go has two built-in constructor mechanisms for structs—with and without field names.
 
 ```go
 func main() {
