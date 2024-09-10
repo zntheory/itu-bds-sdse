@@ -51,7 +51,7 @@ func main() {
 
 </br>
 
-Note: The struct method can be defined in any file within the package.
+**Note:** The struct method can be defined in any file within the package.
 
 </br>
 </br>
