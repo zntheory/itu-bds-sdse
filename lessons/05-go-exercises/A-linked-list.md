@@ -10,7 +10,7 @@ keywords:
 
 ### Instructions
 
-Create a singly linked list in Go.
+Create a singly linked list data structure in Go.
 
 The linked list should have the following methods:
 
@@ -20,9 +20,24 @@ The linked list should have the following methods:
 
 The linked list should accept a data of type `string`, e.g. `InsertLast(data string)`.
 
-When displaying the list, print the data of each node—e.g. output might look like this:
+</br>
+
+Using it should look something like this:
+  
+```go
+list := SinglyLinkedList{}
+
+list.InsertLast("Hello")
+list.InsertLast("My")
+list.InsertLast("World")
+list.InsertLast("!")
+
+list.Display()
+```
 
 </br>
+
+When displaying the list, print the data of each node—e.g. output might look like this:
 
 ```plaintext
 "Hello" -> "My" -> "World" -> "!"
@@ -30,7 +45,7 @@ When displaying the list, print the data of each node—e.g. output might look l
 
 </br>
 
-#### Extra — Implement one or more of the following methods
+### Extra (optional) — Implement one or more of the following methods
 
 * `InsertFirst` - inserts a new node at the beginning of the list.
 * `DeleteFirst` - deletes the first node from the list.
