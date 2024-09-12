@@ -18,9 +18,19 @@ The linked list should have the following methods:
 * `DeleteLast` - deletes the last node from the list.
 * `Display` - prints the list from beginning to end.
 
+The linked list should accept a data of type `string`, e.g. `InsertLast(data string)`.
+
+When displaying the list, print the data of each node—e.g. output might look like this:
+
 </br>
 
-Extra — Implement one or more of the following methods:
+```plaintext
+"Hello" -> "My" -> "World" -> "!"
+```
+
+</br>
+
+#### Extra — Implement one or more of the following methods
 
 * `InsertFirst` - inserts a new node at the beginning of the list.
 * `DeleteFirst` - deletes the first node from the list.
@@ -33,3 +43,5 @@ Extra — Implement one or more of the following methods:
 > **More information:** 
 > - https://en.wikipedia.org/wiki/Linked_list
 > - https://www.wscubetech.com/resources/dsa/singly-linked-list-data-structure
+
+</br>
