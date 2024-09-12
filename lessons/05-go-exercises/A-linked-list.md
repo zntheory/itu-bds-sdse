@@ -10,9 +10,7 @@ keywords:
 
 ### Instructions
 
-Create a singly linked list data structure in Go.
-
-The linked list should have the following methods:
+One basic data structure used in many cases in the linked list.  One special case of this data structure is the "singly linked list" data structure.  In this exercise, we will build a simplified singly linked list data structure in Go, with the following functionalities:
 
 * `InsertLast` - inserts a new node at the end of the list.
 * `DeleteLast` - deletes the last node from the list.
