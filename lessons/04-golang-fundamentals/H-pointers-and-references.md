@@ -76,7 +76,9 @@ To get the address of a variable, use the `&` operator.
 
 </br>
 
-> Let's try and print the address of the pointer and the value of the pointer.
+### Exercise: Printing pointer information
+
+> Let's try and print the address of the pointer and the value of the pointer in the above code example.
 
 <!-- fmt.Println("The the pointer is %v and the value is %v", pointer, *pointer) -->
 
