@@ -167,7 +167,7 @@ Remember, arrays are fixed length and slices are dynamic length.
 ### Arrays
 
 ```go
-var countries = [180]string
+var countries [180]string
 countries[0] = "Denmark"
 
 // Initialize with values, shorthand notation
@@ -183,7 +183,7 @@ accounts := [5]int{1, 2, 3, 4, 5}
 We use append to add values and note that the new slice is assigned back to the variable.
 
 ```go
-var countries = []string
+var countries []string
 countries = append(countries, "Denmark")
 ```
 
