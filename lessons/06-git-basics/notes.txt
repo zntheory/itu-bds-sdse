@@ -1,0 +1,25 @@
+*What is git? Why use it?
+*git config (set user.name + user.email)
+*Create a new repository
+*Semantic versioning/Conventional commit messages
+*git add, commit, status
+*git log (--graph, --decorate)
+*SHA for commit hashes
+*Branching
+*Merge
+*Rebase
+*HEAD
+--*(maybe: reflog, talk about cherry picking)
+*Working with remote repositories (git fetch, merge, pull), remotes etc.
+*Pull/Push
+*Tags
+*Introduction: Conflict resolution
+*Stashing
+*Resolving conflicts with merge
+--*Resolving conflicts with rebase
+--*(maybe: Talk about issues with rebasing)
+--*Reuse of recorded resolutions (rerere)
+--*Rebase/Merge: "Ours" vs. "Theirs"
+*Searching git logs
+*Revert
+*Reset
