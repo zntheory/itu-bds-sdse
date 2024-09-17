@@ -145,15 +145,15 @@ We will be using a bit of both.
 
 ## Some facts
 
-- git is an acyclic graph
+- Git is an acyclic graph
 
 </br>
 
-- in git, each commit is a node in the graph, and each node has a parent (except the first commit), and each pointer is a child to parent relationship
+- In git, each commit is a node in the graph, and each node has a parent (except the first commit), and each pointer is a child to parent relationship
 
 </br>
 
-- if *untracked* files are deleted they are lost forever, **so commit early and often**—you can always change history to turn it into one commit (squashing)
+- If *untracked* files are deleted they are lost forever, **so commit early and often**—you can always change history to turn it into one commit (squashing)
 
 </br>
 </br>
@@ -176,9 +176,9 @@ For many people their experience with git can be summed up in these 5 commands:
 </br>
 </br>
 
-Anything beyond that can feel _mysterious_.
+Anything beyond that can feel _very advanced_.
 
-We will go a bit beyond that.
+We will go a bit beyond these.
 
 For now, we assume you have zero knowledge and experience with **git**. This part of the course is about making you practically comfortable using git for daily work and forming some good habits.
 
