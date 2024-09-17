@@ -204,6 +204,8 @@ commit 486f1898821ee74a59ca154e0785f0f589ccb6e2
 </br>
 </br>
 </br>
+</br>
+</br>
 
 ### Question
 
@@ -218,18 +220,18 @@ Why is your commit SHA different than mine?
 </br>
 </br>
 </br>
-
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
 </br>
 </br>
 
+### Here is another question
+
+This is a bit harder.
+
+Can you find your commit's SHA within the `.git` directory?
+
+</br>
+
+> **Hint:** You will need that SHA you copied earlier.
 
 </br>
 </br>
@@ -238,5 +240,250 @@ Why is your commit SHA different than mine?
 </br>
 </br>
 </br>
+</br>
+</br>
+</br>
+</br>
+
+### Observation
+
+All commits exist in the `.git/objects` directory with the first 2 characters of the SHA as the directory and the rest (38) as the file name.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Remember
+
+Everything in git is stored as a file in the `.git` directory.
+
+What is in the file for our SHA?
+
+</br>
+
+```bash
+cat .git/objects/48/6f1898821ee74a59ca154e0785f0f589ccb6e2
+
+xK ]s71|
+Z&+:!RxW2q:AdȠBe]
+lVO*{.su48we9c_9 %
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Reading the commit object
+
+> Can you get `git cat-file -p <SHA>` to output the content of `README.md`?
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Reading the commit object
+
+```bash
+git cat-file -p 486f1898821ee74a59ca154e0785f0f589ccb6e2
+
+tree f93e3a1a1525fb5b91020da86e44810c87a2d7bc
+author Lasse Lund Sten Jensen <lajl@itu.dk> 1726603863 +0200
+committer Lasse Lund Sten Jensen <lajl@itu.dk> 1726603863 +0200
+
+batman
+```
+
+Not quite what we wanted, but we can look at the other SHA for tree.
+
+```bash
+git cat-file -p f93e3a1a1525fb5b91020da86e44810c87a2d7bc
+
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    README.md
+```
+
+Still not the content of `README.md`, but we can see the SHA of the blob. Let us look at that.
+
+```bash
+git cat-file -p e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+We are learning git!
+```
+
+So there is our content of `README.md`—assuming we set it to "We are learning git!".
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Observation
+
+Tree is a directory.
+
+Blob is a file.
+
+> **Important:** Git does _not_ store diffs, but the entirety of the change.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: A second commit
+
+Make a second commit with a new file and content.
+
+> * Create a new file, we call it `document.md`.
+> * Add some content to the file. We will use "This is a document".
+> * Add the file to the staging area.
+> * Commit the file with a message.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: A second commit
+
+Create the file `document.md` and add the content `This is a document`.
+
+```bash
+git add document.md
+git commit -m "document"
+
+[main ef831b9] document
+ 1 file changed, 1 insertion(+)
+ create mode 100644 document.md
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Reading the document commit object
+
+> Can you get `git cat-file -p <SHA>` to output the content of `document.md`?
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Reading the document commit object
+
+```bash
+git cat-file -p ef831b9
+
+tree 7de536eec1170876ccb1238b78a0ee4d7dbab94a
+parent 486f1898821ee74a59ca154e0785f0f589ccb6e2
+author Lasse Lund Sten Jensen <lajl@itu.dk> 1726606575 +0200
+committer Lasse Lund Sten Jensen <lajl@itu.dk> 1726606575 +0200
+
+document
+```
+
+Notice we have a `parent` SHA.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Observation
+
+If we do the same for the tree, we can see that git stores the entirety of the repository and not just the one change.
+
+```bash
+git cat-file -p 7de536eec1170876ccb1238b78a0ee4d7dbab94a
+
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    README.md
+100644 blob 9de2f7e0f0b41ff960078f4879c6e9a67ee562f4    document.md
+```
+
+</br>
+
+In other words, git stores the entire state of the repository at each commit, and we only need a single commit SHA to recover the entire state of the repository at that commit.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+Git commits are organized as an acyclic graph that happens to be linear. Time is the order commits follow.
+
 </br>
 </br>

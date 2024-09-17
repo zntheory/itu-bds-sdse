@@ -1,0 +1,199 @@
+---
+description: "Basics of Git."
+title: "Branches"
+keywords:
+  - Software engineering
+  - Git
+---
+
+## Branches
+
+Truth is that you are not likely going to be working on the `main` branch all the time. Especially if working in a team.
+
+Normally you will branch out from the main line of development to work on a new feature or fix a bug. When you are done, you merge the branch back into the main line.
+
+</br>
+
+When you see `main` in the terminal, this _also_ refers to a branch. The main branch.
+
+</br>
+</br>
+
+> We will be talking more about branching strategies later, which builds on the foundation covered in this section.
+> 
+> For now, we focus on the git commands necessary to work with branches.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+Branches are very _cheap_ to create. A branch is essentially a **pointer**.
+
+There are some performance considerations if you have a repository with a lot of branches, but generally this is only going to be a problem when the volume grows large or the repository itself takes up a lot of storage space.
+
+</br>
+
+> **Rule of thumb:** When you are done with a branch, delete it.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Create a new repository and initial commit
+
+> * Create a new repository `learn-git`.
+> * Create a new file `README.md`.
+> * Add a line of text to it that says `A`.
+> * Commit the file with the message also saying `A`.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Create a new repository and initial commit
+
+```plaintext
+git log
+
+commit 0ad5c13d0496e517e66aad45ccf4cc75b09340df (HEAD -> main)
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
+Date:   Wed Sep 18 00:34:58 2024 +0200
+
+    A
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Creating branches
+
+Branching is easy and is done with the `branch` command.
+
+```bash
+git branch feature
+```
+
+This creates a new branch called `feature`.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>

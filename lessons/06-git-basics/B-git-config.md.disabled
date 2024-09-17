@@ -80,12 +80,18 @@ In some projects you may want to use your personal details, like a different ema
 
 **Some facts about `git config`:**
 
-- All gif config keys are in the shape of `<section>.<key>`.
+- All gif config keys are in the shape of `<section>.<key>`. we refer to them as `<key>` for now.
 - You can set a key with `--global` to set it globally, meaning it counts for all new repos as well, unless overridden.
 - The keys used in creating a commit tied to you are `user.name` and `user.email`.
 - Add a key value pair with `git config --add --global <key> "<value>"`.
 - You can view any value of git config by executing `git config --get <key>`.
 - You can view all git config by executing `git config --list`, and `git config --list --local` for local settings specifically.
+
+</br>
+
+> **Note**: You _change_ a value by setting it again.
+
+> **Note**: If you have multiple key-value pairs, the last one set will get used. You can always remove all of them with `git config --unset-all <key>`.
 
 </br>
 </br>

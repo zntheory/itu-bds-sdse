@@ -1,10 +1,10 @@
-*What is git? Why use it?
-*git config (set user.name + user.email)
-*Create a new repository
+OK*What is git? Why use it?
+OK*git config (set user.name + user.email)
+OK*Create a new repository
 *Semantic versioning/Conventional commit messages
-*git add, commit, status
-*git log (--graph, --decorate)
-*SHA for commit hashes
+OK*git add, commit, status
+OK*git log (--graph, --decorate)
+OK*SHA for commit hashes
 *Branching
 *Merge
 *Rebase
@@ -20,6 +20,6 @@
 --*(maybe: Talk about issues with rebasing)
 --*Reuse of recorded resolutions (rerere)
 --*Rebase/Merge: "Ours" vs. "Theirs"
-*Searching git logs
+OK*Searching git logs
 *Revert
 *Reset
