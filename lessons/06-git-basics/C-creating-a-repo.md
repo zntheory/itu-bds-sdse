@@ -128,8 +128,6 @@ From within `my-git-repo`, run `find .git`:
 .git/refs/tags
 ```
 
-Ok. Looks good!
-
 </br>
 </br>
 </br>
@@ -140,44 +138,9 @@ Ok. Looks good!
 </br>
 </br>
 
+This is basically what **peak empty** git repository looks like.
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+Essentially git is stateless. Every time we run a command, git has to figure out where we are and what has changed etc.
 
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-
-</br>
-</br>
-</br>
-</br>
-</br>
 </br>
 </br>
