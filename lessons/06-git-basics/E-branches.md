@@ -152,6 +152,8 @@ git branch
 * main
 ```
 
+The current working branch is marked with an asterisk `*`.
+
 </br>
 </br>
 
@@ -246,9 +248,10 @@ git switch feature # or git checkout feature
 </br>
 </br>
 
-### Exercise: Change the README.md file on the `feature` branch
+### Exercise: Create a document.md file with changes on the `feature` branch
 
-> * Add a line of text to the `README.md` file that says `B`.
+> * Create a new file called `document.md`.
+> * Add a line of text to the `document.md` file that says `B`.
 > * Commit the file with the message also saying `B`.
 
 > * Do it again, except replace `B` with `C` in the above.
@@ -270,15 +273,15 @@ When done use `git log` to see the history.
 </br>
 </br>
 
-### Solution: Change the README.md file on the `feature` branch
+### Solution: Create a document.md file with changes on the `feature` branch
 
 ```bash
-echo "B" >> README.md
-git add README.md
+echo "B" >> document.md
+git add document.md
 git commit -m "B"
 
-echo "C" >> README.md
-git add README.md
+echo "C" >> document.md
+git add document.md
 git commit -m "C"
 ```
 
