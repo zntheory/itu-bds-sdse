@@ -1,0 +1,223 @@
+---
+description: "Basics of Git."
+title: "Merging"
+keywords:
+  - Software engineering
+  - Git
+---
+
+## Merging changes
+
+What we have done so far is to create a new `feature` branch based on `main`, switch to the `feature`branch, make some new changes and commit them.
+
+</br>
+
+Now we want to switch back to the `main` branch and add some new changes there.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Switch to the `main` branch and make some changes
+
+> * Switch to the `main` branch.
+> * Add `D`and `E` to the `README.md` file the same way as we just added `B` and `C` to the `document.md` file.
+
+</br>
+
+**Command reminder:**
+
+```bash
+git switch <branch-name>  # to switch to a branch
+git status                # to see the status of the working directory
+git add <file-name>       # to add a file to the staging area
+git commit -m "<message>" # to commit the changes
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Switch to the `main` branch and make some changes
+
+```bash
+git switch main
+
+echo "D" >> README.md
+git add README.md
+git commit -m "D"
+
+echo "E" >> README.md
+git add README.md
+git commit -m "E"
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+If we run `git log` we should see something like this:
+
+```plaintext
+commit 1fef21501625d1cb1ab99318ad0fa8487d6ef5cb (HEAD -> main)
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
+Date:   Fri Sep 20 22:27:19 2024 +0200
+
+    E
+
+commit 8ae69da5d2938a5fee06207f2c3320a4c5b90a9b
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
+Date:   Fri Sep 20 22:27:06 2024 +0200
+
+    D
+
+commit 16b8f7f933c4c92b83ebb8602109c84c2d799359
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
+Date:   Fri Sep 20 21:48:09 2024 +0200
+
+    A
+```
+
+</br>
+
+We can see that `D`, `E`, and `A` are all on the `main` branch.
+
+The branches now look like this:
+
+![Branch feature](../../images/lessons/git/branch-a-b-c-d-e.svg)
+
+</br>
+
+This means the _branches have diverged_.
+
+They have commits that are unique in both and they have a common ancestor `A`.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Git merge and rebasing
+
+When we have two branches that have diverged, we can merge them back together.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
