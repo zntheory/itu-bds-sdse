@@ -285,6 +285,8 @@ git add document.md
 git commit -m "C"
 ```
 
+> **Note:** The `>>` operator appends text to a file. It also creates the file, if it does not exist. It only works on Unix-like systems.
+
 </br>
 
 **Output:**
@@ -343,7 +345,7 @@ Read up on it in the documentation, `man git-branch`.
 git branch -d feature
 ```
 
-> Do not delete the branch yet!
+> **Important:** Do **not** delete the branch now!
 
 </br>
 </br>

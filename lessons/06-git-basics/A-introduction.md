@@ -35,6 +35,8 @@ If you are not familiar with `man`, it is a command-line utility for reading the
 man man
 ```
 
+> **Hint:** Use `q` to exit.
+
 </br>
 </br>
 
