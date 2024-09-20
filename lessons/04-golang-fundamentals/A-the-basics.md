@@ -147,6 +147,8 @@ As a practical exercise (well, many exercises) along the way, we are going to bu
 - You can think of it as a project
 - Modules contain a `go.mod` file that contains the module name, configuration and metadata (about dependencies)
 
+> **Note:** While having a module for a directory is not mandatory for Go code to run, modules is a way to organize your code and dependencies into chunks much like a small project. By creating the `go.mod` file, you are creating a module. The real power of modules comes into light when you start to use dependencies as a module helps you manage them.
+
 </br>
 </br>
 </br>
