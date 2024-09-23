@@ -123,17 +123,17 @@ git reflog
 **Output:**
 
 ```plaintext
-562f958 (HEAD -> main, feature-two) HEAD@{0}: checkout: moving from feature to main
+562f958 (HEAD -> main) HEAD@{0}: checkout: moving from feature to main
 312c2e9 (feature) HEAD@{1}: checkout: moving from feature-rebase-main to feature
 109ad4e (feature-rebase-main) HEAD@{2}: checkout: moving from main to feature-rebase-main
-562f958 (HEAD -> main, feature-two) HEAD@{3}: checkout: moving from feature-rebase-main to main
+562f958 (HEAD -> main) HEAD@{3}: checkout: moving from feature-rebase-main to main
 109ad4e (feature-rebase-main) HEAD@{4}: rebase (finish): returning to refs/heads/feature-rebase-main
 109ad4e (feature-rebase-main) HEAD@{5}: rebase (pick): C
 b12a712 HEAD@{6}: rebase (pick): B
-562f958 (HEAD -> main, feature-two) HEAD@{7}: rebase (start): checkout main
+562f958 (HEAD -> main) HEAD@{7}: rebase (start): checkout main
 312c2e9 (feature) HEAD@{8}: checkout: moving from feature to feature-rebase-main
 312c2e9 (feature) HEAD@{9}: checkout: moving from main to feature
-562f958 (HEAD -> main, feature-two) HEAD@{10}: merge feature-two: Fast-forward
+562f958 (HEAD -> main) HEAD@{10}: merge feature-two: Fast-forward
 1fef215 HEAD@{11}: checkout: moving from feature-two to main
 ```
 
@@ -265,9 +265,9 @@ git reflog -3
 **Output:**
 
 ```plaintext
-562f958 (HEAD -> main, feature-two) HEAD@{0}: checkout: moving from feature-delete-test to main
+562f958 (HEAD -> main) HEAD@{0}: checkout: moving from feature-delete-test to main
 058f2b5 HEAD@{1}: commit: some commit message
-562f958 (HEAD -> main, feature-two) HEAD@{2}: checkout: moving from main to feature-delete-test
+562f958 (HEAD -> main) HEAD@{2}: checkout: moving from main to feature-delete-test
 ```
 
 </br>
@@ -303,31 +303,31 @@ git log
 
 ```plaintext
 commit 058f2b5e13773f4e6aca1fa4ebe412ddab64ea5a (HEAD -> feature-delete-test)
-Author: Lasse Lund Sten Jensen <LLZJ@novonordisk.com>
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
 Date:   Tue Sep 24 00:04:13 2024 +0200
 
     some commit message
 
-commit 562f95864c377acd831d1027eeba98fa86875d6d (main, feature-two)
-Author: Lasse Lund Sten Jensen <LLZJ@novonordisk.com>
+commit 562f95864c377acd831d1027eeba98fa86875d6d (main)
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
 Date:   Mon Sep 23 18:54:56 2024 +0200
 
     Y
 
 commit 37fb15232e7b8cc90d9f7e7470d95331936956e5
-Author: Lasse Lund Sten Jensen <LLZJ@novonordisk.com>
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
 Date:   Mon Sep 23 18:54:37 2024 +0200
 
     X
 
 commit 1fef21501625d1cb1ab99318ad0fa8487d6ef5cb
-Author: Lasse Lund Sten Jensen <LLZJ@novonordisk.com>
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
 Date:   Fri Sep 20 22:27:19 2024 +0200
 
     E
 
 commit 8ae69da5d2938a5fee06207f2c3320a4c5b90a9b
-Author: Lasse Lund Sten Jensen <LLZJ@novonordisk.com>
+Author: Lasse Lund Sten Jensen <lajl@itu.dk>
 Date:   Fri Sep 20 22:27:06 2024 +0200
 
     D
