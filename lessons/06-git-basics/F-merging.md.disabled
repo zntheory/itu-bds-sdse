@@ -238,6 +238,7 @@ git checkout -b main-merge-feature
 > * Switch to the `main-merge-feature` branch, if you are not already on it.
 > * Merge the `feature` branch into the `main-merge-feature` branch.
 > * Check the log to see the result.
+> * (Extra) Use the `--parents` flag to see the parents of the merge commit.
 
 **Command reminder:**
 
@@ -322,6 +323,120 @@ git log --oneline --graph --all
 </br>
 
 We can see that the `main-merge-feature` branch now has the commits from both `main` and `feature`. The branches have been merged together.
+
+</br>
+
+### Extra: Using the `--parents` flag
+
+Taking a look at the log with the `--parents` flag, we can see the parents of all the commits.
+
+```bash
+git log --oneline --graph --all --parents
+```
+
+**Output:**
+
+```plaintext
+*   8d3108b 1fef215 312c2e9 (HEAD -> main-merge-feature) Merge branch 'feature' into main-merge-feature
+|\
+| * 312c2e9 a582ce0 (feature) C
+| * a582ce0 16b8f7f B
+* | 1fef215 8ae69da (main) E
+* | 8ae69da 16b8f7f D
+|/
+* 16b8f7f A
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Fast forward merges
+
+When we have a branch that has diverged from another branch, but the branch we are merging into has not changed since the divergence, we can do a **fast forward merge**.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Merging a branch into another branch using a fast forward merge
+
+> * Switch to the `main` branch.
+> * Create a new branch `feature-two` and switch to it.
+> * Create a new document `document-two.md`.
+> * Add values `X` and `Y` to the `document-two.md`.
+> * Add two commits with messages `X` and `Y`.
+> * Merge the `feature-two` branch into the `main` branch.
+
+</br>
+
+The branch structure should look like this.
+
+![Branch feature-two](../../images/lessons/git/branch-x-y.svg)
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Merging a branch into another branch using a fast forward merge
+
+```bash
+git switch main             # switch to the main branch
+git checkout -b feature-two # create and switch to the feature-two branch
+
+# add X change
+echo "X" >> document-two.md
+git add document-two.md
+git commit -m "X"
+
+# add Y change
+echo "Y" >> document-two.md
+git add document-two.md
+git commit -m "Y"
+
+git switch main             # switch back to the main branch
+git merge feature-two       # merge the feature-two branch into the main branch
+```
+
+**Output:**
+
+```plaintext
+Updating 1fef215..562f958
+Fast-forward
+ document-two.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 document-two.md
+```
+
+</br>
+
+### Observation
+
+The fast-forward merge happened because the ***common ancestor*** of the `main` and `feature-two` branches was the ***tip*** of the `main` branch itself.
 
 </br>
 </br>
