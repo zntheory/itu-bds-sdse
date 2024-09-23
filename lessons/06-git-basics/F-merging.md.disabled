@@ -134,16 +134,8 @@ When we have two branches that have diverged, we can merge them back together.
 
 </br>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
 
+When merging we can have two different outcomes—one with a merge commit and one without. Strategy for merging matters here.
 
 </br>
 </br>
@@ -157,6 +149,22 @@ When we have two branches that have diverged, we can merge them back together.
 </br>
 </br>
 
+### What is a merge exactly?
+
+A merge is a way to combine the changes from one branch into another branch. Essentially combining two histories together that have diverged somewhere in the past.
+
+As in our example, where `main` and `feature` have diverged from a shared commit `A`. Here `A` is the ***first** common ancestor*. This is also called the **merge base**.
+
+</br>
+
+When we merge, **git** 
+- walks the history of the two branches,
+- finds the merge base, 
+- checks out the merge base
+- and *"plays" those commits* on top of it,
+- and then creates a new commit with the changes from both branches called the ***merge commit***.
+
+A *merge commit* has *two parents*. One from the branch we are merging from and one from the branch we are merging to.
 
 </br>
 </br>
@@ -170,6 +178,24 @@ When we have two branches that have diverged, we can merge them back together.
 </br>
 </br>
 
+## Merge
+
+We have the `merge` command.
+
+</br>
+
+The branch we are on (i.e. has checked out, with the `*`) is the branch we are merging into, also called the `target` branch. The branch in `<branch-name>` will be the `source` branch.
+
+</br>
+</br>
+
+**Command:**
+
+```bash
+git merge <branch-name>
+```
+
+> Read more about it in the manual: `man git-merge`
 
 </br>
 </br>
@@ -183,6 +209,17 @@ When we have two branches that have diverged, we can merge them back together.
 </br>
 </br>
 
+To merge the `feature` branch into the `main` branch, we can use the `merge` command.
+
+However, since we will be using this to demonstrate another merge technique, let us first checkout a copy of the `main` branch, so we do not mess up our history.
+
+We call it `main-merge-feature`.
+
+</br>
+
+```bash
+git checkout -b main-merge-feature
+```
 
 </br>
 </br>
@@ -196,6 +233,95 @@ When we have two branches that have diverged, we can merge them back together.
 </br>
 </br>
 
+### Exercise: Merge the `feature` branch into the `main-merge-feature` branch using the `merge` command
+
+> * Switch to the `main-merge-feature` branch, if you are not already on it.
+> * Merge the `feature` branch into the `main-merge-feature` branch.
+> * Check the log to see the result.
+
+**Command reminder:**
+
+```bash
+git switch <branch-name>  # to switch to a branch
+git merge <branch-name>   # to merge a branch into the current branch
+git log                   # to see the logs
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Merge the `feature` branch into the `main-merge-feature` branch using the `merge` command
+
+```bash
+git switch main-merge-feature # switch to the target branch
+git merge feature             # merge source branch into the target branch
+```
+
+</br>
+
+We will be presented with this message.
+
+**Output:**
+
+```plaintext
+Merge branch 'feature' into main-merge-feature
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+```
+
+This is the default message when merging. We can just save and close the editor by typing `:wq` and pressing `Enter`.
+
+> **Note:** `:wq` is the command (:) to **write** (w) and **quit** (q) in *vim*—usually the default editor in *git*.
+
+</br>
+
+We should see something like this.
+
+**Output:**
+
+```plaintext
+Merge made by the 'ort' strategy.
+ document.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 document.md
+```
+
+</br>
+
+Next, we can check the log to see the result.
+
+```bash
+git log --oneline --graph --all
+```
+
+**Output:**
+
+```plaintext
+*   8d3108b (HEAD -> main-merge-feature) Merge branch 'feature' into main-merge-feature
+|\
+| * 312c2e9 (feature) C
+| * a582ce0 B
+* | 1fef215 (main) E
+* | 8ae69da D
+|/
+* 16b8f7f A
+```
+
+</br>
+
+We can see that the `main-merge-feature` branch now has the commits from both `main` and `feature`. The branches have been merged together.
 
 </br>
 </br>
