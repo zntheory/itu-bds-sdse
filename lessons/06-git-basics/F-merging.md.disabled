@@ -128,7 +128,7 @@ They have commits that are unique in both and they have a common ancestor `A`.
 </br>
 </br>
 
-## Git merge and rebasing
+## Git merge
 
 When we have two branches that have diverged, we can merge them back together.
 
@@ -450,6 +450,11 @@ The fast-forward merge happened because the ***common ancestor*** of the `main` 
 </br>
 </br>
 
+> **Cleanup**
+> 
+> If you followed the exercises up unti now, you can delete the `merge-feature-two` and the `feature-two` branches.
+>
+> Use `git branch -d <branch-name>` to delete a branch.
 
 </br>
 </br>
@@ -460,5 +465,204 @@ The fast-forward merge happened because the ***common ancestor*** of the `main` 
 </br>
 </br>
 </br>
+</br>
+</br>
+
+## Git rebase
+
+Assume we look at the git history and we have the following branches: `main` and `feature`.
+
+They should look like this.
+
+![Branch feature](../../images/lessons/git/branch-a-b-c-d-e-x-y.svg)
+
+</br>
+</br>
+
+By rebasing, we can make the history look like this.
+
+![Branch feature](../../images/lessons/git/branch-a-d-e-x-y-b-c.svg)
+
+</br>
+</br>
+
+Rebasing is the act of taking the changes from one branch and apply them on top of another branch. Or to the tip, really.
+
+Essentially "rewriting" git history.
+
+This can be useful if we want to keep a clean history, without merge commits. It allows us to apply our changes on top of the latest "reality".
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## How rebase works
+
+Basically, when rebasing this is the flow.
+
+1. Execute `git rebase <target-branch>`. The branch you are on when running the command is the branch you are rebasing—we call it `<current-branch>`.
+2. The `<target-branch>` is checked out.
+3. The commits from `<current-branch>` are "played" one commit at a time.
+4. When done, the `<current-branch>` is updated to the latest commit SHA of `<target-branch>` which now has all the changes from `<target-branch>` as the base.
+
+</br>
+
+> **Important**
+>
+> It will lead to complications at some point if you do not understand this flow and what goes on.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Exercise: Rebase the `feature` branch with the `main` branch
+
+In order to not mess up the history for other exercises, we will create a new branch `feature-rebase-main` and rebase that branch with the `main` branch.
+
+Do this first.
+
+```bash
+git checkout feature
+git checkout -b feature-rebase-main
+```
+
+</br>
+
+> * Switch to the `feature-rebase-main` branch.
+> * Rebase the `feature-rebase-main` branch with the `main` branch.
+> * Check the logs to see the result.
+
+</br>
+
+**Command reminder:**
+
+```bash
+git rebase <target-branch>  # to rebase a branch with the current branch
+git log                     # to see the logs
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Solution: Rebase the `feature` branch with the `main` branch
+
+```bash
+git checkout feature-rebase-main  # switch to the current branch
+git rebase main  # rebase the current branch with the target branch
+```
+
+Check the logs to see the result.
+
+```bash
+git log --oneline --graph --parents
+```
+
+</br>
+
+**Output:**
+
+```plaintext
+* 109ad4e b12a712 (HEAD -> feature-rebase-main) C
+* b12a712 562f958 B
+* 562f958 37fb152 (main) Y
+* 37fb152 1fef215 X
+* 1fef215 8ae69da E
+* 8ae69da 16b8f7f D
+* 16b8f7f A
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Observation
+
+Rebase rewrites the history of the current branch with the missing commits from the target branch. When this is done, rebase actually creates ***new*** commits with the same changes, which is why you will see different commit SHAs.
+
+</br>
+
+> Read more about merging vs. rebasing. Especially the section "The golden rule of rebasing":
+> 
+> [https://www.atlassian.com/git/tutorials/merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Pros
+
+- Clean history, no merge commits.
+
+### Cons
+
+- Alters history of a branch. Rewriting history can be dangerous.
+- If a branch was already on the remote, we need to force push the changes. This can lead to complications if others are working on the same branch.
+
+### Warning
+
+- **Never** rebase a branch that is shared with others.
+- **NEVER CHANGE HISTORY OF A PUBLIC BRANCH**—Meaning, do not change the history of `main` or whatever branch you are using as the main branch.
+- You will end up with two branches with the same name, but with different histories, which _will_ lead to merge conflicts and team frustations. **The moment you do this, it breaks everybody.**
+
+## Rule of thumb here
+
+- Always ***merge*** on *public* branches.
+- Only ***rebase*** on *private* branches.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+There is a lot more to learn here, but for the scope of this course, this is enough.
+
 </br>
 </br>
