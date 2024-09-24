@@ -1,12 +1,12 @@
 ---
 description: "Basics of Git."
-title: "Stashing changes"
+title: ".gitignore"
 keywords:
   - Software engineering
   - Git
 ---
 
-## WIP
+## Ignoring files and directories
 
 
 

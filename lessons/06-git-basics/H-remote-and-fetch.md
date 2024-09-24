@@ -242,6 +242,16 @@ From ../learn-git
 </br>
 </br>
 
+So now we are up to date, right?
+
+```bash
+git log
+```
+
+</br>
+</br>
+
+(try it now)
 
 </br>
 </br>
@@ -252,5 +262,49 @@ From ../learn-git
 </br>
 </br>
 </br>
+</br>
+</br>
+
+> We can use `git log origin/main` to see the log of the `main` branch in the remote repository.
+
+> We can also use `git branch -a` to see all the branches, including the remote branches.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+> **Question:** Can you think of a way to get the changes from the remote?
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+We can do a merge.
+
+```bash
+git merge origin/main
+```
+
+</br>
+</br>
+
+But there is also `git pull`, which we will cover next.
+
 </br>
 </br>
