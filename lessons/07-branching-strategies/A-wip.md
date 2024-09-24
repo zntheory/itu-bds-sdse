@@ -1,6 +1,6 @@
 ---
 description: "Basics of Git."
-title: "Work in progress"
+title: "We will cover this later when going through workflows"
 keywords:
   - Software engineering
   - Git
