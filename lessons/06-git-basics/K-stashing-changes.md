@@ -24,7 +24,7 @@ We can think of stash as a stack of temporary changes. We may use them later. We
 </br>
 </br>
 
-**Command:**
+**Command**
 
 ```bash
 git stash

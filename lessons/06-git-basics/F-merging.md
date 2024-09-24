@@ -189,7 +189,7 @@ The branch we are on (i.e. has checked out, with the `*`) is the branch we are m
 </br>
 </br>
 
-**Command:**
+**Command**
 
 ```bash
 git merge <branch-name>

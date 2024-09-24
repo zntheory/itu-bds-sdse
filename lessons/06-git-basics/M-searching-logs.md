@@ -8,7 +8,9 @@ keywords:
 
 ## Searching repository history
 
-Logs are great, because we can search them. For all the details, see `man git-log`. Here are some examples:
+Logs are great, because we can search them. For all the details, see `man git-log`.
+
+Here are some examples:
 
 ```bash
 git log --author="John Doe"
