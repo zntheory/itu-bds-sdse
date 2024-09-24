@@ -6,7 +6,7 @@ keywords:
   - Git
 ---
 
-## Work in progress
+## We will cover branching strategies later as part of workflow strategies
 
 
 
