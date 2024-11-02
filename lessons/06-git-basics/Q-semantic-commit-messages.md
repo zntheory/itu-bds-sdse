@@ -11,6 +11,10 @@ keywords:
 People who work on code and version control it in a repository (e.g. git), often do not think about the importance of writing good commit messages. Especially as the amount of contributors increase—both concurrently and over time as people come and go.
 
 </br>
+
+![commit messages](../../images/lessons/git/commit-messages.png)
+
+</br>
 </br>
 </br>
 </br>
