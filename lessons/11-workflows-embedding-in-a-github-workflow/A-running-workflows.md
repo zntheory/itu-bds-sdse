@@ -2,6 +2,8 @@
 title: "Running Dagger in a GitHub Actions workflow"
 ---
 
+<!-- TODO: Workflows and Actions -->
+
 ## Embedding is easy
 
 Embedding Dagger in a GitHub Actions workflow is straightforward as the Dagger team provides a GitHub Action that you can use to run Dagger pipelines.
@@ -61,7 +63,7 @@ jobs:
 
 </br>
 
-This [workflow](https://github.com/lasselundstenjensen/dagger-in-practice/blob/main/.github/workflows/dagger.yaml) runs on every push to the `main` branch and when manually triggered.
+This [workflow](https://github.com/lasselundstenjensen/itu-bds-sdse-dagger-and-github/blob/main/.github/workflows/dagger.yaml) runs on every push to the `main` branch and when [manually triggered](https://github.com/lasselundstenjensen/itu-bds-sdse-dagger-and-github/actions).
 
 It uses the `dagger/dagger-for-github` action to run the pipeline.
 
