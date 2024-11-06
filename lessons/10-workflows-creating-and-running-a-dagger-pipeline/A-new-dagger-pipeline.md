@@ -228,7 +228,7 @@ Remember to navigate back to the `go` directory before running Dagger!
 </br>
 </br>
 
-You can also find the complete example here [GitHub](https://github.com/lasselundstenjensen/dagger-in-practice/tree/main/go).
+You can also find the complete example here [GitHub](https://github.com/lasselundstenjensen/itu-bds-sdse-dagger-and-github/tree/main/go).
 
 </br>
 </br>
