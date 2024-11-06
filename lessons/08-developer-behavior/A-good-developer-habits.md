@@ -6,6 +6,24 @@ keywords:
   - Git
 ---
 
+“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+
+—_[Refactoring](https://martinfowler.com/books/refactoring.html "Refactoring: Improving the Design of Existing Code"), Martin Fowler with Kent Beck, 1996_
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 ## Always start with the foundation
 
 This means before we actually start building "the thing", we need to have setup a repeatable way to build/run/deploy "the thing".
