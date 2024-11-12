@@ -1,14 +1,62 @@
 ---
-title: "Running Dagger in a GitHub Actions workflow"
+title: "Running Dagger in a GitHub Action workflow"
 ---
 
 <!-- TODO: Workflows and Actions -->
 
 ## Embedding is easy
 
-Embedding Dagger in a GitHub Actions workflow is straightforward as the Dagger team provides a GitHub Action that you can use to run Dagger pipelines.
+Embedding Dagger in a GitHub Action workflow is straightforward as the Dagger team provides a GitHub Action that you can use to run Dagger pipelines.
 
 Alternatively, the proces is the same as what we just did, if you do not want to use the provided GitHub Action.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Dagger, GitHub and a runner
+
+To run a Dagger pipeline in a GitHub Action workflow, you need to create a new workflow file in your repository and add the necessary steps to run the pipeline.
+
+This eventually means running the Dagger workflow inside the GitHub workflow.
+
+</br>
+
+The general outline of how Dagger, GitHub workflows and GitHub runners work together looks like this:
+
+</br>
+
+<div style="background-color: white;">
+<img src="../../images/lessons/dagger/dagger-on-github-logical.svg" />
+</div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### In more detail
+
+</br>
+
+<div style="background-color: white;">
+<img src="../../images/lessons/dagger/dagger-on-github-logical-2.svg" />
+</div>
 
 </br>
 </br>
@@ -49,7 +97,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.23.0
+          go-version: 1.23.3
           cache: false
 
       - name: Run Dagger pipeline
@@ -58,7 +106,7 @@ jobs:
           workdir: go
           verb: run
           args: go run pipeline.go
-          version: "0.12.7"
+          version: "0.14.0"
 ```
 
 </br>

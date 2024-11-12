@@ -51,8 +51,8 @@ Often we learn flavors of YAML or other schemas, but Dagger allows you to write 
 
 Dagger currently offers SDKs for the following languages:
 
-- [Go](https://docs.dagger.io/reference/typescript/modules)
-- [Python](https://dagger-io.readthedocs.io/en/sdk-python-v0.12.7/)
+- [Go](https://pkg.go.dev/dagger.io/dagger)
+- [Python](https://dagger-io.readthedocs.io/en/sdk-python-v0.14.0/)
 - [TypeScript](https://docs.dagger.io/reference/typescript/modules)
 
 </br>

@@ -1,12 +1,12 @@
 ---
 description: "Basics of Git."
-title: "Working with Github in a team"
+title: "Working with GitHub in a team"
 keywords:
   - Software engineering
   - Git
 ---
 
-## Github in practice
+## GitHub in practice
 
 *(Live session)*
 
@@ -24,7 +24,7 @@ keywords:
 
 </br>
 
-> **Note:** We will talk about Github workflows and Dagger workflows. Both are pipelines, but they are not the same thing.
+> **Note:** We will talk about GitHub workflows and Dagger workflows. Both are pipelines, but they are not the same thing.
 
 </br>
 </br>

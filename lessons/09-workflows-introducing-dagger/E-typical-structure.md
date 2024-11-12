@@ -48,6 +48,35 @@ Because Dagger functions are still under development as of this writing, we will
 
 </br>
 </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## How it works
+
+![Dagger how it works with OCI](../../images/lessons/dagger/dagger-oci.png)
+
+</br>
+
+1. Your Go program imports the Dagger Go library.
+2. Using the Go library, your program opens a new session to a Dagger Engine: either by connecting to an existing engine, or by provisioning one on-the-fly.
+3. Using the Go library, your program prepares API requests describing pipelines to run, then sends them to the engine. The wire protocol used to communicate with the engine is private and not yet documented, but this will change in the future. For now, the Go library is the only documented API available to your program.
+4. When the engine receives an API request, it computes a Directed Acyclic Graph (DAG) of low-level operations required to compute the result, and starts processing operations concurrently.
+5. When all operations in the pipeline have been resolved, the engine sends the pipeline result back to your program.
+6. Your program may use the pipeline's result as input to new pipelines.
+
+</br>
+
+*Source: https://archive.docs.dagger.io/0.9/sdk/go/*
+
+</br>
+</br>
 
 Ok.. Let's continue and start building a pipeline! <i class="fa-solid fa-rocket"></i>
 

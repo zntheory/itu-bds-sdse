@@ -42,7 +42,7 @@ The very first time you run a pipeline, Dagger will download the necessary Docke
 </br>
 </br>
 
-Next, let's run the pipeline in a GitHub Actions workflow.
+Next, let's run the pipeline in a GitHub Action workflow.
 
 </br>
 </br>

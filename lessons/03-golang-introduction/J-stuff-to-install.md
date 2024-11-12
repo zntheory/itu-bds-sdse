@@ -18,7 +18,7 @@ You may know what Git is about, but Docker and Dagger are probably new to you. D
 ## What you need to install
 
 - **Visual Studio Code** (latest version, 1.92.2)
-- **Go** (latest version, 1.23.0)
+- **Go** (latest version, 1.23.3)
 - **Git** (latest version, 2.46.0)
 - **Docker Engine** (latest version, 27.1.1), can be installed with **Docker Desktop** (latest version, 4.33.0)
 - **Dagger** (latest version, 0.12.5)
