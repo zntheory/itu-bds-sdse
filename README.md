@@ -1,4 +1,4 @@
-> This contains the course materials for the ITU SDSE course 2024.
+> This contains the course materials for the ITU SDSE course 2024. It has been modified later for the ITU 'Data Science in Production: MLOps and Software Engineering' course 2025 (BSDSPMS1KU).
 > 
 > Course Website Starter Template by Brian Holt.
 >

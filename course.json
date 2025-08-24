@@ -3,15 +3,15 @@
     "name": "Lasse Lund Sten Jensen",
     "company": "Novo Nordisk"
   },
-  "title": "Software Engineering",
-  "subtitle": "for Data Scientists (SDSE'24)",
+  "title": "Data Science in Production: MLOps and Software Engineering",
+  "subtitle": "for Data Scientists (BSDSPMS1KU'25)",
   "frontendMastersLink": "",
   "social": {
     "linkedin": "lasselundstenjensen",
     "github": "lasselundstenjensen/itu-bds-sdse",
     "twitter": ""
   },
-  "description": "Software Engineering for Data Scientists",
+  "description": "Data Science in Production: MLOps and Software Engineering",
   "keywords": ["your", "Google", "keywords", "here"],
   "productionBaseUrl": "/itu-bds-sdse",
   "csvPath": "./out/lessons.csv"
