@@ -4,11 +4,13 @@ title: "Stuff to install"
 
 # Stuff to install
 
-We will be using **Visual Studio Code** (VSCode) as our editor, and we will be **using the terminal to run our code**. We also need **Go** (obviously, duh) and extensions for VSCode to make our lives easier.
+We will be using **Visual Studio Code** (VSCode) as our editor, and we will be **using the terminal to run our code**. We also need **Go** (obviously—it is part of the course) and extensions for VSCode to make our lives easier.
 
 Later on we will be using **Git**, **Docker** and **Dagger**, but install instructions for those follow in later sections and are not necessary for now.
 
 You may know what Git is about, but Docker and Dagger are probably new to you. Don't worry, we will cover them in later lessons.
+
+> **Important:** If you are running Windows, you _will_ need to install WSL2. The development stack has certain requirements and a *nix environment (MacOS/Linux) is one of them.
 
 </br>
 </br>
@@ -17,13 +19,15 @@ You may know what Git is about, but Docker and Dagger are probably new to you. D
 
 ## What you need to install
 
-- **Visual Studio Code** (latest version, 1.92.2)
-- **Go** (latest version, 1.23.3)
-- **Git** (latest version, 2.46.0)
-- **Docker Engine** (latest version, 27.1.1), can be installed with **Docker Desktop** (latest version, 4.33.0)
-- **Dagger** (latest version, 0.12.5)
+- **Visual Studio Code** (latest version, 1.103.2)
+- **Go** (latest version, 1.25.0)
+- **Git** (latest version, 2.51.0)
+- **Docker Engine** (latest version, 28.3.2), can be installed with **Docker Desktop** (latest version, 4.44.3)
+- **Dagger** (latest version, 0.18.6)
 
-Versions are as of writing this course (September 2024).
+Versions are as of writing this course (August 2025).
+
+> **Note:** Other Visual Studio Code based IDEs, such as **Cursor** or **Windsurf**, can be used as well, but you cannot expect support from TAs if you use them instead. The only caveats are that the IDEs are version wise behind VSCode and extensions are only available in older versions.
 
 Using Homebrew for package management is recommended. You can install Homebrew by following the instructions [here](https://brew.sh/). Homebrew only works on MacOS and most Linux distributions.
 
@@ -49,7 +53,8 @@ Using Homebrew for package management is recommended. You can install Homebrew b
 
 2. Install the following [Go extension](https://marketplace.visualstudio.com/items?itemName=golang.go) in VSCode:
 ![Extensions](../../images/lessons/golang-introduction/vscode-go-extension.png)
-This will install several tool integrations in VSCode and most importantly the Go LSP.
+This will install several tool integrations in VSCode and most importantly the Go LSP.</br></br>
+Install the most recent version. Currently it is **v0.48.0**.
 
 </br>
 </br>
@@ -77,7 +82,12 @@ This will install several tool integrations in VSCode and most importantly the G
 </br>
 </br>
 
-### <i class="fa-solid fa-rocket"></i> Let's see if it works <i class="fa-solid fa-rocket"></i>
+## <i class="fa-solid fa-rocket"></i> Let's see if it works <i class="fa-solid fa-rocket"></i>
+
+</br>
+</br>
+
+**Go Test**
 
 Hello World in Go!
 
@@ -108,3 +118,98 @@ go run main.go
 </br>
 
 You should see something that is not an error >D
+
+</br>
+</br>
+
+---
+
+</br>
+</br>
+
+**Git Test**
+
+Let's verify Git is working properly:
+
+```bash
+git version
+```
+
+You should see the Git version number displayed.
+
+</br>
+</br>
+
+---
+
+</br>
+</br>
+
+**Docker Test**
+
+Let's check if Docker Engine is running:
+
+```bash
+docker --version
+```
+
+You should see the Docker version information.
+
+> **Note:** If it says Docker is not running, you may need to start Docker Desktop.
+
+</br>
+</br>
+
+Run a simple container:
+
+```bash
+docker run hello-world
+```
+
+You should see a "Hello from Docker!" message confirming Docker is working correctly—like this:
+
+```text
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+</br>
+</br>
+
+---
+
+</br>
+</br>
+
+**Dagger Test**
+
+Verify Dagger installation:
+
+```bash
+dagger version
+```
+
+You should see the Dagger version number.
+
+</br>
+</br>
+
+> **Note:** If any of these tests fail, double-check your installation steps and ensure all tools are properly installed and configured. Ask the TAs for help.
