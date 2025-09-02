@@ -63,27 +63,37 @@ See the private key as your ID card, and the public key as your full name. It's 
 
 To the fun part.
 
+<br>
+
 ### Step 0 - Check for existing SSH keys
 ```bash
 ls -al ~/.ssh
 ```
 
-**If you already have a key pair and don't want to overwrite them**, make a new file for the new secret key:
+You might already have a key pair or two, or maybe even none. Either way is fine. Just know that the rest of the guide will use `~/.ssh/id_rsa_github` as the new key file's location.
+
+If that file already exists on your computer, remember to replace the string for the rest of the guide, e.g. `~/.ssh/id_rsa_datascience`.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### Step 1 - Create a new secret key file
 
 ```bash
-touch ~/.ssh/<new_secret_key>
+touch ~/.ssh/id_rsa_github
 ```
 
-... where `<new_secret_key>` could for example be `id_github`.
-
-Know that private, rsa-based SSH keys per default are written to the file `~/.ssh/id_rsa`, so the above command creates the new file in that same folder (`~/.ssh/`), so you can easily find all of your SSH key pairs in there (if you save them there).
-
-Thus, for future steps, remember to replace `id_rsa` with `<new_secret_key>`, so that even `~/.ssh/id_rsa.pub` turns into `~/.ssh/<new_secret_key>.pub`.
+Know that private, rsa-based SSH keys per default are written to the file `~/.ssh/id_rsa`, so the above command creates a new empty file (`id_rsa_github`) in that same folder (`~/.ssh/`), so you can easily find all of your SSH key pairs in there (if you save them there).
 
 Don't worry about creating a file for the public key. The generator takes care of that.
 
-**If you already have a key pair, and you are *really* sure about overwriting them**, then just follow the guide as if you didn't have a key pair.
-
 </br>
 </br>
 </br>
@@ -94,9 +104,9 @@ Don't worry about creating a file for the public key. The generator takes care o
 </br>
 </br>
 
-### Step 1 - Create SSH key pair
+### Step 1 - Generate SSH key pair
 
-Replace `<your_email@example.com>` below with your actual e-mail address.  See it as metadata to help you differentiate between multiple key pairs, as you might have multiple GitHub accounts (personal: `username@proton.me`, study: `username@itu.dk`, work: `username@novonordisk.com`).
+Replace `<your_email@example.com>` below with your actual e-mail address.  See it as metadata to help you (or a future organisation administrator in charge of your team) to differentiate between multiple key pairs.
 
 ``` bash
 ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
@@ -104,11 +114,27 @@ ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
 
 Then, it will prompt you for where to write the secret key.
 
-**If you didn't have any key pairs**, press `ENTER`. This will write the generated secret key to a new file `~/.ssh/id_rsa`, and the public key to a new file `~/.ssh/id_rsa.pub`.
+```
+~/.ssh/id_rsa_github.pub
+```
 
-**Else, if you have a key pair and don't want to overwrite them**, type the location of the new secret key file you created earlier.
+This will write the generated secret key to the specified file, and the public key to a new file `~/.ssh/id_rsa_github.pub`.
 
-This will write the generated secret key to the specified file, and the public key to a new file `~/.ssh/<new_secret_key>.pub`.
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+**FYI:** If you had just pressed `ENTER` (agreed to default behaviour), it will write the generated keys to two new files:
+- `~/.ssh/id_rsa` (secret key)
+- `~/.ssh/id_rsa.pub` (public key)
+
+**Question:** Say you did just press `Enter` here and go about your day. Later, you generate a new key pair, e.g. for your new GitHub account used specifically for work. You follow all the steps, except again, when prompted on where to write the generated keys, you merely press `Enter`. What would happen then?
 
 </br>
 </br>
@@ -126,7 +152,7 @@ This will write the generated secret key to the specified file, and the public k
 
 **Yes, please?** Ensure that you will remember it: Once lost, it cannot be recovered, and you'll just have to replace your SSH key pair with new ones.
 
-When typing in your passphrase, you will not see any characters being typed --- that's just security by obscurity.
+When typing in your passphrase, you will not see any characters being typed --- that's just security by obscurity. It will still take your input.
 
 Afterward, it will prompt you to type in the same passphrase again...
 
@@ -146,6 +172,12 @@ Afterward, it will prompt you to type in the same passphrase again...
 eval "$(ssh-agent -s)"
 ```
 
+**Curious about what's happening?**
+
+Running `ssh-agent -s` prints shell commands meant to configure the shell environment. These commands would be run in a shell sub-process rather than the current shell process, so the commands are unable to do the necessary environment changes to the current shell process. You can see this as if a child is babbling on about how to redecorate the house. Without the parent listening and decorating, nothing would change.
+
+So, `eval` takes the shell commands as arguments, and **eval**uates each command, essentially executing them within the current shell process. Thus, the current shell environment has been configured by the agent. Continuing with the house decoration allegory, the parent can now hear the child, evaluates their wishes, and redecorates accordingly.
+
 </br>
 </br>
 </br>
@@ -159,10 +191,10 @@ eval "$(ssh-agent -s)"
 ### Step 3: Add SSH key to SSH agent
 
 ```bash
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa_github
 ```
 
-*If you didn't use the default location, remember to specify the location to your new secret key file.*
+It will prompt you for the key's passphrase if one was set.
 
 </br>
 </br>
@@ -176,12 +208,10 @@ ssh-add ~/.ssh/id_rsa
 
 ### Step 4: Display the contents of your public key
 ```bash
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa_github.pub
 ```
 
 ... which outputs a string with the content: `ssh-rsa <long gibberish>= <computer_name>`, or something similar to that.
-
-*Didn't use the default location? Remember to specify your new secret key file's location.*
 
 </br>
 </br>
@@ -214,13 +244,13 @@ cat ~/.ssh/id_rsa.pub
 
 ### Step 6: Start cloning repositories via SSH, not HTTPS links
 
-You might have tried cloning git repositories from GitHub using HTTPS links:
+You might have tried cloning git repositories from GitHub using HTTPS links like so:
 
 ```bash
 git clone https://github.com/<repo_owner>/<repo_name>
 ```
 
-But to use the new SSH keys to clone and skip manually logging into GitHub, run:
+But to use the new SSH keys to clone and skip manually logging into GitHub, we run:
 
 ```bash
 git clone git@github.com:<repo_owner>/<repo_name>.git
@@ -231,6 +261,7 @@ git clone git@github.com:<repo_owner>/<repo_name>.git
 2. Click on the green **<> Code** button.
 3. Clicon on the **SSH** tab.
 4. Copy the SSH URL to the clipboard.
+5. Paste it as an argument to the `git clone` command.
 
 Enjoy.
 
