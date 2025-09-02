@@ -114,12 +114,16 @@ ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
 
 Then, it will prompt you for where to write the secret key.
 
+Know that `~` is an alias to `/home/<user>/`, but the SSH agent might complain about such a directory not existing due to it being an alias. Writing it out explicitly should avoid that.
+
+
+Replace `<user>` below with the username you're using on the machine.
+
 ```
-~/.ssh/id_rsa_github.pub
+/home/<user>/.ssh/id_rsa_github
 ```
 
 This will write the generated secret key to the specified file, and the public key to a new file `~/.ssh/id_rsa_github.pub`.
-
 </br>
 </br>
 </br>
