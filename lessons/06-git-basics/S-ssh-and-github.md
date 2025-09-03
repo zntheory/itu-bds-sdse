@@ -123,8 +123,7 @@ ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
 
 Then, it will prompt you for where to write the secret key.
 
-Know that `~` is an alias to `/home/<user>/`, but the SSH agent might complain about such a directory not existing due to it being an alias. Writing it out explicitly should avoid that.
-
+Know that `~` is a shell expansion (do not worry about this term), which expands to `/home/<user>/`, but the SSH agent might complain about such a directory not existing due to it being interpreted as the literal character rather than being expanded. Writing it out explicitly should avoid that. A possible alternative could also be to use the environment expansion $HOME instead as this may be more widely supported.
 </br>
 </br>
 
