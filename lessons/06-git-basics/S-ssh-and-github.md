@@ -163,7 +163,7 @@ If you had just pressed 'ENTER' (agreed to default behaviour), it will write the
 </br>
 </br>
 
-## Step 2.5: Add a passphrase to the key pair (Optional)
+## Step 2.5: Add a passphrase to the key pair (_Optional_ **BUT HIGHLY RECOMMENDED**)
 
 **No, thanks?** Press 'ENTER', and continue to the next step.
 
