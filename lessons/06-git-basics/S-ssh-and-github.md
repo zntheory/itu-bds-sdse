@@ -90,27 +90,9 @@ If that file already exists on your computer, remember to replace the string for
 </br>
 </br>
 
-## Step 1 - Create a new secret key file
+## Step 1 - Generate SSH key pair
 
-```bash
-touch ~/.ssh/id_rsa_github
-```
-
-Know that private, rsa-based SSH keys per default are written to the file `~/.ssh/id_rsa`, so the above command creates a new empty file (`id_rsa_github`) in that same folder (`~/.ssh/`), so you can easily find all of your SSH key pairs in there (if you save them there).
-
-Don't worry about creating a file for the public key. The generator takes care of that.
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-## Step 2 - Generate SSH key pair
+**Option 1:** With your e-mail as a comment (Optional)
 
 Replace `<your_email@example.com>` below with your actual e-mail address.  See it as metadata to help you (or a future organisation administrator in charge of your team) to differentiate between multiple key pairs.
 
@@ -118,13 +100,28 @@ Replace `<your_email@example.com>` below with your actual e-mail address.  See i
 ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
 ```
 
+**Option 2:** Without your e-mail as a comment
+
+``` bash
+ssh-keygen -t rsa -b 4096
+```
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 </br>
 </br>
 
-Then, it will prompt you for where to write the secret key.
+## Step 1.5 - Specify location
 
-Know that `~` is a shell expansion (do not worry about this term), which expands to `/home/<user>/`, but the SSH agent might complain about such a directory not existing due to it being interpreted as the literal character rather than being expanded. Writing it out explicitly should avoid that. A possible alternative could also be to use the environment expansion $HOME instead as this may be more widely supported.
-</br>
+The agent will prompt you for which file to write the secret key to. Don't worry about the public key here.
+
+If the secret key file doesn't exist, it will create one. The same is true for the public key file.
+
 </br>
 
 Replace `<user>` below with the username you're using on the machine.
@@ -136,6 +133,11 @@ Replace `<user>` below with the username you're using on the machine.
 This will write the generated secret key to the specified file, and the public key to a new file `~/.ssh/id_rsa_github.pub`.
 </br>
 </br>
+
+Know that `~` is a shell expansion (do not worry about this term), which expands to `/home/<user>/`, but the SSH agent might complain about such a directory not existing due to it being interpreted as the literal character rather than being expanded. Writing it out explicitly should avoid that. A possible alternative could also be to use the environment expansion `$HOME` instead as this may be more widely supported than `~`.
+
+</br>
+</br>
 </br>
 </br>
 </br>
@@ -145,31 +147,37 @@ This will write the generated secret key to the specified file, and the public k
 </br>
 
 ## FYI
-If you had just pressed 'ENTER' (agreed to default behaviour), it will write the generated keys to two new files:
+If you had just pressed 'ENTER' (agreed to default behaviour), it will write the generated keys to the following files:
 - `~/.ssh/id_rsa` (secret key)
 - `~/.ssh/id_rsa.pub` (public key)
 
-</br>
-
-**Question:** Say you did just press 'ENTER' here and go about your day. Later, you generate a new key pair, e.g. for your new GitHub account used specifically for work. You follow all the steps, except again, when prompted on where to write the generated keys, you merely press 'ENTER'. What would happen then?
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-## Step 2.5: Add a passphrase to the key pair (_Optional_ **BUT HIGHLY RECOMMENDED**)
-
-**No, thanks?** Press 'ENTER', and continue to the next step.
+So, if you save your SSH keys in that same folder (`~/.ssh/`), you can easily find all of your SSH key in there.
 
 </br>
 
-**Yes, please?** Ensure that you will remember it: Once lost, it cannot be recovered, and you'll just have to replace your SSH key pair with new ones.
+> **Question:** Say you did just press 'ENTER' here and go about your day. Later, you generate a new key pair, e.g. for your new GitHub account used specifically for work. You follow all the steps, except again, when prompted on where to write the generated keys, you merely press 'ENTER'. What would happen then?
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## Step 2: Add a passphrase (Optional but HIGHLY recommended)
+
+Imagine having a student ID without a pincode, or even a phone without a pincode...
+
+Please take the recommendation to heart.
+
+</br>
+
+**[ No, thanks? ]** Press 'ENTER', and continue to the next step.
+
+**[ Yes, please? ]** Ensure that you will remember it: Once lost, it cannot be recovered, and you'll just have to replace your SSH key pair with new ones.
 
 When typing in your passphrase, you will not see any characters being typed --- that's just security by obscurity. It will still take your input.
 
@@ -234,6 +242,10 @@ cat ~/.ssh/id_rsa_github.pub
 ... which outputs a string with the content: `ssh-rsa <long gibberish>= <computer_name>`, or something similar to that.
 
 </br>
+
+**Fun fact:** The command `cat` is used to read a file, or multiple files, sequentially and print it to the standard output. Shorthand for con**cat**enate files.
+
+</br>
 </br>
 </br>
 </br>
@@ -244,7 +256,7 @@ cat ~/.ssh/id_rsa_github.pub
 </br>
 
 ## Step 6: Add SSH key to GitHub
-1. Copy the contents of the SSH public key.
+1. Copy the contents of the SSH **public key** file (.pub)
 2. Access your GitHub account settings.
 3. Navigate to **SSH and GPG keys**.
 4. Click on **New SSH key**.
@@ -272,7 +284,7 @@ git clone https://github.com/<repo_owner>/<repo_name>
 
 </br>
 
-But to use the new SSH keys to clone and skip manually logging into GitHub, we run:
+But to use the new SSH key pair to clone and skip manually logging into GitHub, we run:
 
 ```bash
 git clone git@github.com:<repo_owner>/<repo_name>.git
